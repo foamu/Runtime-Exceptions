@@ -1,0 +1,29 @@
+
+public class Example {
+
+	public static void main(String[] args) {
+
+		// Runetime exception of NullPointerException
+		String text = null;
+		System.out.println(text);
+
+		// Runtime exception of ArithmeticException
+		int number = 50 / 0;
+		System.out.println(number);
+
+		// Runtime exception of ArrayIndexOutOfBoundsException
+		int[] booba = { 1, 2, 3, 4, 5 };
+		System.out.println(booba[5]);
+
+		// You can actually handle Runetime Exceptions, though
+		// its always preferable to fix the actual error.
+
+		try {
+			int[] runtimehandler = { 1, 2, 3, 4, 5 };
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(e.toString());
+		}
+
+	}
+
+}
